@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>University FAQ Chatbot</title>
+</head>
+<body>
+  <h1>Welcome to the University FAQ Chatbot</h1>
+  <p>Click the chat icon at the bottom right to start asking your questions!</p>
+
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "0972cc71-22d5-42a0-8b76-986f4f49768c",
+      region: "au-syd",
+      serviceInstanceID: "43acaeee-2670-4736-941d-81536ad93753",
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + 
+               (window.watsonAssistantChatOptions.clientVersion || 'latest') + 
+               "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>
