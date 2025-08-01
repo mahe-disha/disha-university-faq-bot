@@ -12,20 +12,46 @@
       padding: 0;
       text-align: center;
     }
+
     header {
       background-color: #003366;
       color: white;
       padding: 20px 0;
     }
+
     main {
       padding: 30px;
     }
+
     .chat-info {
       font-size: 18px;
       color: #333;
       max-width: 600px;
       margin: auto;
     }
+
+    #help-desk {
+      margin: 30px auto;
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #help-content {
+      display: none;
+      margin: 20px auto;
+      max-width: 600px;
+      background: #ffffff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 6px;
+      text-align: left;
+    }
+
     footer {
       background-color: #003366;
       color: white;
@@ -35,45 +61,14 @@
       width: 100%;
       font-size: 14px;
     }
-    img.logo {
-      height: 50px;
-      margin-bottom: 10px;
-    }
   </style>
 </head>
 <body>
+
   <header>
-    <!-- Optional logo -->
-    <!-- <img src="your-logo-url.png" alt="University Logo" class="logo"> -->
     <h1>University FAQ Chatbot</h1>
   </header>
 
   <main>
     <p class="chat-info">
-      Welcome! This chatbot answers common questions about admissions, courses, hostel, fees, and more. <br><br>
-      Click the chat icon at the bottom-right to start.
-    </p>
-  </main>
-
-  <footer>
-    &copy; 2025 Your University Name. For demo or informational use.
-  </footer>
-
-  <!-- Watson Assistant Embed Code -->
-  <script>
-    window.watsonAssistantChatOptions = {
-      integrationID: "0972cc71-22d5-42a0-8b76-986f4f49768c",
-      region: "au-syd",
-      serviceInstanceID: "43acaeee-2670-4736-941d-81536ad93753",
-      onLoad: async (instance) => { await instance.render(); }
-    };
-    setTimeout(function(){
-      const t = document.createElement('script');
-      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
-              (window.watsonAssistantChatOptions.clientVersion || 'latest') +
-              "/WatsonAssistantChatEntry.js";
-      document.head.appendChild(t);
-    });
-  </script>
-</body>
-</html>
+      Ask questions about <strong>faculty<
