@@ -4,11 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>University FAQ Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px 0;
+    }
+    main {
+      padding: 30px;
+    }
+    .chat-info {
+      font-size: 18px;
+      color: #333;
+      max-width: 600px;
+      margin: auto;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 14px;
+    }
+    img.logo {
+      height: 50px;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to the University FAQ Chatbot</h1>
-  <p>Click the chat icon at the bottom right to start asking your questions!</p>
+  <header>
+    <!-- Optional logo -->
+    <!-- <img src="your-logo-url.png" alt="University Logo" class="logo"> -->
+    <h1>University FAQ Chatbot</h1>
+  </header>
 
+  <main>
+    <p class="chat-info">
+      Welcome! This chatbot answers common questions about admissions, courses, hostel, fees, and more. <br><br>
+      Click the chat icon at the bottom-right to start.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 Your University Name. For demo or informational use.
+  </footer>
+
+  <!-- Watson Assistant Embed Code -->
   <script>
     window.watsonAssistantChatOptions = {
       integrationID: "0972cc71-22d5-42a0-8b76-986f4f49768c",
@@ -18,9 +69,9 @@
     };
     setTimeout(function(){
       const t = document.createElement('script');
-      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + 
-               (window.watsonAssistantChatOptions.clientVersion || 'latest') + 
-               "/WatsonAssistantChatEntry.js";
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+              (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+              "/WatsonAssistantChatEntry.js";
       document.head.appendChild(t);
     });
   </script>
